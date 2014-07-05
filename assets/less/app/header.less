@@ -1,11 +1,7 @@
 header{
-	height: 210px;
-
 	h1{
-		.gridP(4);
 
 		a{
-			.size(360px, 150px);
 			text-indent:-9999px;
 			display: block;
 			background: url(../images/logo.png) 0 5px no-repeat;
@@ -13,11 +9,8 @@ header{
 	}
 
 	nav{
-		background-color: @blue;
-		.size(100%, 50px);
 
 		.menu{
-			.container();
 		}
 
 		ul{
@@ -58,53 +51,6 @@ header{
 					}
 				}
 			}
-		}
-	}
-
-	.phone{
-		.gridP(5);
-		color: @blue;
-		font-size: 30px;
-		padding-top: 15px;
-
-		small{
-			font-size: 20px;
-		}
-	}
-
-	#selectSearch{
-		position: relative;
-		padding-top: 20px;
-		.gridP(3);
-
-		#s{
-			border: 1px solid rgb(51, 82, 110);
-			display: block;
-			font-family: Tahoma;
-			line-height: 40px;
-			font-size: 16px;
-			float: left;
-			width: 100%;
-			padding: 0 0 0 3%;
-			border-radius: 0;
-			.box-sizing(border-box);
-		}
-
-		button{
-			&:before{
-				color: #FFF;
-				background-color: @blue;
-				font-size: 32px;
-				padding: 4px;
-				float: right;
-				border-radius: 0;
-			}
-
-			position: absolute;
-			right: -4px;
-			border: none;
-			background: none;
-			border-radius: 0;
 		}
 	}
 }
