@@ -1,0 +1,633 @@
+/*
+=========================================================================================
+========================================= GENERAL  ======================================
+=========================================================================================
+*/
+
+.selectUnit(@color: @blue, @border: @blueDarker){
+	h4{
+		border: 1px solid @color;
+
+		i{
+			&:before{
+				background-color: @color;
+			}
+		}
+	}
+
+	ul{
+		border: 1px solid @color;
+
+		li{
+			a{
+				border-bottom: 1px solid @border;
+
+				&:hover{
+					background-color: @color;
+				}
+
+				i{
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+.selectUnit{
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px;
+	background-color: #FFF;
+
+	h4{
+		font-size: 16px;
+		font-family: @font;
+		width: 97%;
+		line-height: 40px;
+		padding: 0 0 0 3%;
+		margin: none;
+
+		display: block;
+
+		i{
+			&:before{
+				color: #FFF;
+				font-size: 32px;
+				padding: 4px;
+				float: right;
+			}
+		}
+	}
+
+	ul{
+		display: none;
+		position: absolute;
+		z-index: 10;
+		top: 72px;
+		background-color: #FFF;
+		width: 100%;
+		top: 36px;
+
+		li{
+			a{
+				display: inline-block;
+				line-height: 32px;
+				padding: 0 3%;
+				width: 94%;
+				color: @blue;
+
+				&:hover{
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	&:hover{
+		ul{
+			display: block;
+		}
+	}
+
+	.selectUnit();
+}
+
+
+/*
+=========================================================================================
+========================================= HOME  ======================================
+=========================================================================================
+*/
+
+#home,
+#contact{
+	h2{
+		color: #FFF;
+		font-size: 36px;
+		font-weight: 600;
+		line-height: 200%;
+		position: relative;
+		margin-bottom: 0;
+
+		i{
+			&:before{
+				border-radius: 100%;
+				padding: 10px 30px 50px;
+				position: absolute;
+				right: 0;
+				top: -45px;
+				z-index: 10;
+			}
+		}
+	}
+}
+
+#map{
+	background-color: @blue;
+  background-image: -o-linear-gradient(bottom,      @blue 72px, #FFFFFF 72px);
+	background-image: -moz-linear-gradient(bottom,    @blue 72px, #FFFFFF 72px);
+	background-image: -webkit-linear-gradient(bottom, @blue 72px, #FFFFFF 72px);
+	background-image: -ms-linear-gradient(bottom,     @blue 72px, #FFFFFF 72px);
+	background-image: linear-gradient(to bottom,      @blue 72px, #FFFFFF 72px);
+	
+
+	h2{
+		overflow: hidden;
+
+		i{
+			&:before{
+				background-color: rgb(255, 255, 255);
+				color: @blue;
+				top: 30px;
+			}
+		}
+	}
+
+	iframe{
+		margin-top: 20px;
+		.size( 100%, 500px);
+		border: none;
+	}
+}
+
+
+#news{
+	background-color: @blue;
+	background-image: -o-linear-gradient(bottom,      #2D4965 50%, @blue 50%);
+	background-image: -moz-linear-gradient(bottom,    #2D4965 50%, @blue 50%);
+	background-image: -webkit-linear-gradient(bottom, #2D4965 50%, @blue 50%);
+	background-image: -ms-linear-gradient(bottom,     #2D4965 50%, @blue 50%);
+	background-image: linear-gradient(to bottom,      #2D4965 50%, @blue 50%);
+
+	i{
+		&:before{
+			background-color: #2D4965;
+		}
+	}
+
+	ul{
+		li{
+			margin: 20px 0;
+			.gridP(3);
+
+
+			a{
+				display: block;
+				background-color: #FFF;
+
+				img{
+					.size(100%, 220px);
+				}
+				.sky{
+					background-color: @sky;
+					padding: 10px 0;
+					text-align: center;
+					color: #FFF;
+					margin: 0;
+					.transition(0.6s);
+
+					span{
+						float: right;
+						display: block;
+						background-color: @skyDarker;
+						font-weight: bold;
+						margin-top: -10px;
+						padding: 10px;
+						font-size: 36px;
+					}
+
+					&.date{
+						font-weight: bold;
+					}
+				}
+
+				h3{
+					padding: 10px;
+				}
+
+				&:hover{
+					.sky{
+						background-color: @skyDarker;
+
+						span{
+							background-color: @sky;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#testimony{
+	background-color: @red;
+
+	i{
+		&:before{
+			background-color:  @red;
+		}
+	}
+
+	.testimony{
+		float: left;
+		margin: 50px 50px 0 0;
+		width: 300px;
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		h4, p{
+			color: #FFF;
+		}
+
+		h4{
+			font-size: 18px;
+		}
+
+		.btn{
+			width: 100%;
+			padding: 10px 0;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-top: 40px;
+		}
+	}
+
+	img{
+		float: right;
+	}
+}
+
+
+#info{
+	background-color: @blue;
+
+	.wrap-content{
+		padding-bottom: 20px;
+	}
+
+	i{
+		&:before{
+			background-color:  @blue;
+		}
+	}
+
+	.data{
+		margin: 20px 0;
+		.gridP(3);
+		color: #FFF;
+
+		p{
+			font-size: 40px;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		h3{
+			color: #FFF;
+			font-weight: 600;
+			text-align: center;
+		}
+
+		i{
+			display: block;
+			margin: auto;
+			text-align: center;
+
+			&:before{
+				font-size: 50px;
+				padding: 10px;
+				border-radius: 100%;
+				border: 2px solid #FFF;
+				margin: 10px auto 0;
+			}
+		}
+
+		&.students{
+			i{
+				float: left;
+
+				&:before{
+					border: 0 none;
+					font-size: 34px;
+					padding: 0;
+					margin: 5px 6px;
+				}
+			}
+		}
+	}
+}
+
+
+/*
+=========================================================================================
+========================================= CONTACT  ======================================
+=========================================================================================
+*/
+
+#contact{
+//	background: url("../images/photos/contact.jpg") center 0 no-repeat;
+//	padding-top: 310px;
+//
+//	h1.title{
+//		border-top: 8px solid rgb(255, 255, 255);
+//		box-shadow: 0 2px rgba(0, 0, 0, 0.5) inset;
+//		color: rgb(255, 255, 255);
+//		font-size: 60px;
+//		margin: -200px auto 0;
+//		padding-top: 10px;
+//		text-align: center;
+//		text-shadow: 0 2px rgba(0, 0, 0, 0.5);
+//		width: 280px;
+//	}
+
+	#formSocial{
+		padding: 20px 0;
+	}
+
+	h1{
+		text-align: center;
+
+		span{
+			font-family: @fontCalligraphy;
+			color: @pinkRed;
+			text-decoration: underline;
+			font-size: 130%;
+			font-weight: normal;
+		}
+	}
+
+	form{
+
+		.clearfix{
+			margin: 20px 0;
+		}
+
+		.gridP(9);
+
+		.fl, .fr {
+			width: 48%;
+			.clearfix();
+		}
+
+		.btn{
+			float: right;
+		}
+	}
+
+	aside{
+		.gridP(3);
+	}
+}
+
+/*
+=========================================================================================
+=================== CERTIFICATES  INSTITUCIONAL  EXCHANGE ===============================
+=========================================================================================
+*/
+#certificates, #institucional, #exchange{
+	padding-top: 130px;
+	background: url("../images/photos/certificates.jpg") no-repeat;
+	margin-bottom: 20px;
+
+	hgroup{
+		margin-bottom: 50px;
+
+		h1{
+			color: @blue;
+			text-align: center;
+			background-color: rgba(255,255,255,0.8);
+			padding: 40px 0;
+			margin: 0 0 130px;
+			font-weight: normal;
+
+			b{
+				font-weight: bold;
+			}
+		}
+
+		h2{
+			color: #FFF;
+			font-size: 40px;
+			background-color: @blue;
+			border-bottom: 10px solid @red;
+			line-height: 70px;
+			text-align: center;
+
+		}
+	}
+
+	#gallery{
+		padding: 20px 0;
+		background-color: @blue;
+		background-image: -o-linear-gradient(bottom,      #2D4965 50%, @blue 50%);
+		background-image: -moz-linear-gradient(bottom,    #2D4965 50%, @blue 50%);
+		background-image: -webkit-linear-gradient(bottom, #2D4965 50%, @blue 50%);
+		background-image: -ms-linear-gradient(bottom,     #2D4965 50%, @blue 50%);
+		background-image: linear-gradient(to bottom,      #2D4965 50%, @blue 50%);
+
+		ul{
+			float: left;
+			width: 70%;
+
+			li{
+				width: 23%;
+				margin: 1% 2% 1% 0;
+				float: left;
+
+				img{
+					width: 100%;
+					border: 3px solid #FFF;
+					.box-sizing(border-box);
+				}
+			}
+		}
+
+		figure{
+			width: 30%;
+			float: right;
+			margin-top: 1%;
+			a{
+				img{
+					border: 5px solid #FFF;
+				}
+			}
+		}
+	}
+}
+
+
+#exchange{
+	background: url("../images/photos/exchange.jpg") center top no-repeat;
+
+	hgroup{
+		margin-bottom: 50px;
+
+		h1{
+			float: right;
+			text-align: left;
+			padding: 0;
+			font-weight: normal;
+			width: 45%;
+			background: none;
+			margin: 0px 0 145px;
+			font-size: 40px;
+			height: 200px;
+
+			b{
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+
+/*
+=========================================================================================
+========================================= COURSES  ======================================
+=========================================================================================
+*/
+
+#courses{
+
+	#courseType{
+		background-color: #152E44;
+
+		ul{
+			margin: auto;
+			width: 600px;
+			height: 60px;
+
+			li{
+				width: 150px;
+				float: left;
+				a{
+					background-color: @blue;
+					color: #FFF;
+					text-align: center;
+					line-height: 30px;
+					font-size: 18px;
+					padding: 15px 0;
+					display: block;
+					width: 100%;
+					box-shadow: 1px 0 rgba(0,0,0,0.3) inset;
+
+					&:hover{
+						background-color: @pinkRed;
+					}
+
+					&.on{
+						background-color: @red;
+					}
+				}
+			}
+		}
+	}
+
+	h1.title{
+		color: #FFF;
+		font-size: 40px;
+		background-color: @blue;
+		border-bottom: 10px solid @red;
+		line-height: 70px;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.course{
+		background-repeat: no-repeat;
+		padding: 15px 0 0;
+
+		.editable{
+			float: right;
+			width: 40%;
+
+			h2.title{
+				font-size: 36px;
+			}
+
+			p{
+				&:last-child{
+					margin-bottom: 50px;
+				}
+			}
+
+			.btn-pink{
+				display: block;
+				margin: auto;
+				float: none;
+				font-family: Gabrielle;
+				padding: 12px 20px;
+				width: 170px;
+				font-size: 38px;
+			}
+
+			&.white{
+				h2, p{ color: #FFF; }
+			}
+		}
+
+		.wrap-content{
+			height: 700px;
+			background-size: 60%;
+			background-repeat: no-repeat;
+
+			&.left{
+				background-position: 100% 0 !important;
+
+				.editable{
+					float: left;
+				}
+			}
+		}
+	}
+
+	#KEP{
+		background-color: #F9BD1D;
+
+		.wrap-content{
+			background-image: url("../images/courses/kep.jpg");
+		}
+	}
+
+	#PET{
+		background-color: #214B62;
+		background-image: url("../images/courses/pet.jpg");
+
+
+	}
+
+	#LAP{
+		background-color: #C2C2C4;
+		background-image: url("../images/courses/lap.jpg");
+		background-position: 100% 0;
+	}
+
+	#Advanced{
+		background-color: #007094;
+
+		.wrap-content{
+			background-image: url("../images/courses/advanced.jpg");
+		}
+	}
+
+	#VIP{
+		background-color: #E7E7E7;
+
+		.wrap-content{
+			background-image: url("../images/courses/VIP.jpg");
+		}
+	}
+
+	#COMPANY{
+		background-color: #BADDE6;
+		background-image: url("../images/courses/company.jpg");
+	}
+
+	#PET, #COMPANY, #LAP{
+		background-size: 55%;
+	}
+}

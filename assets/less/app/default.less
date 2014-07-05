@@ -1,0 +1,610 @@
+/****************************************************************************************
+************************************ DEFAULT | COLORS ***********************************
+****************************************************************************************/
+@black: #000000;
+
+@grayDarker: #333333;
+@gray: #666666;
+@grayLight: #999999;
+@grayHilight: #CCCCCC;
+@graySuperHilight: #EEEEEE;
+
+@blueDarker: #1F3449;
+@blue: #33526E;
+@blueHilight: #B3C5CF;
+
+@pinkRed: #DE2D41;
+@red: #CF0E00;
+
+@ice: #F5F5F5;
+@white: #FFFFFF;
+
+@sky:#00ADEF;
+@skyDarker: #009AD4;
+
+/* start colors alerts bootstrap */
+@redAlertTxt: #B94A48;
+@redAlertBg: #F2DEDE;
+@redAlertBorder: #EED3D7;
+
+@blueAlertTxt: #3A87AD;
+@blueAlertBg: #D9EDF7;
+@blueAlertBorder  : #BCE8F1;
+
+@greenAlertTxt: #468847;
+@greenAlertBg: #DFF0D8;
+@greenAlertBorder : #D6E9C6;
+
+@yellowAlertTxt: #C09853;
+@yellowAlertBg: #FCF8E3;
+@yellowAlertBorder: #FBEED5;
+
+/****************************************************************************************
+*************************************** TYPOGRAPH ***************************************
+****************************************************************************************/
+@font: Tahoma;
+@fontDestak: Raleway;
+@fontCalligraphy: Gabrielle;
+
+@font-face {
+	font-family: @fontCalligraphy;
+	src: url('../fonts/gabrielle/gabrielle-webfont.eot');
+	src: url('../fonts/gabrielle/gabrielle-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/gabrielle/gabrielle-webfont.woff') format('woff'),
+	url('../fonts/gabrielle/gabrielle-webfont.ttf') format('truetype'),
+	url('../fonts/gabrielle/gabrielle-webfont.svg#Gabrielle') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+
+h1, h2, h3, h4, h5, h6, p{ text-rendering: optimizeLegibility; display: block; margin: 0 0 10px;}
+
+p{  
+  line-height:160%;
+  text-align: justify;
+  margin-bottom:10px;
+}
+
+h1, h2, h3, h4, h5, h6{ 
+  line-height:120%;
+  font-weight: normal;
+  font-family: @fontDestak;
+  color: @grayDarker; 
+}
+
+h1{ font-size: 28px; font-weight: bold; color: @blue; }
+h2{ font-size: 24px;}
+h3{ font-size: 18px;}
+h4{ font-size: 16px;}
+h5{ font-size: 12px;}
+h6{ font-size: 10px;}
+
+a{ text-decoration: none; color: @blue;}
+
+.editable{
+	h1, h2, h3, h4, h5, h6{ line-height:160%; font-weight: bold; color: @blue; margin: 20px 0 }
+}
+
+
+/****************************************************************************************
+************************************* DEFAULT | CSS *************************************
+****************************************************************************************/
+body, html{
+	display: block;
+	position: relative;
+	.square(100%);
+	.clearfix;
+}
+
+.wrap-content{
+	width: 1200px;
+	.container();
+}
+/* SETTING BODY ELEMENT */
+body{
+  font-family: @font;
+  font-size: 14px;
+  color: @gray;
+  background: #FFF;
+}
+
+
+/*CASE GOOGLE MAPS USED LOAD */
+.loading{
+  display: block;
+  width: auto; height: auto;
+  background: url('../images/default/loading.gif') no-repeat center center;
+
+  .google-maps{ visibility: hidden;}
+}
+
+/****************************************************************************************
+*********************************** DEFAULT | ALERTS ************************************
+****************************************************************************************/
+
+.alert{
+  display: block;
+  width: 100%; height: auto;
+  margin: 0 0 5px;
+  padding: 8px 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-style: solid;
+  border-width: 1px;
+  z-index: 500;
+  border-radius: 4px;
+  .box-sizing(border-box);
+}
+
+.alert.alert-block{
+  border-color: @yellowAlertBorder;
+  background: @yellowAlertBg;
+  color: @yellowAlertTxt;
+
+  h1, h2, h3, h4, h5, h6{ color: @yellowAlertTxt;}
+}
+
+.alert.alert-error{
+  border-color: @redAlertBorder;
+  background: @redAlertBg;
+  color: @redAlertTxt;
+
+  h1, h2, h3, h4, h5, h6{ color:@redAlertTxt;}
+}
+
+.alert.alert-success{
+  border-color: @greenAlertBorder;
+  background: @greenAlertBg;
+  color: @greenAlertTxt;
+
+  h1, h2, h3, h4, h5, h6{ color:@greenAlertTxt;}
+}
+
+.alert.alert-info{
+  border-color: @blueAlertBorder;
+  background: @blueAlertBg;
+  color: @blueAlertTxt;
+
+  h1, h2, h3, h4, h5, h6{ color:@blueAlertTxt;}
+}
+
+/****************************************************************************************
+**************************************** BUTTONS ****************************************
+****************************************************************************************/
+.btn{
+  display: inline-block;
+  padding: 7px 20px;
+  border-style: solid;
+  border-width: 1px;
+	border-color: @blueDarker;
+  color: #EEE;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  font-family: @font;
+  border-radius: 2px;
+	background-color: @blue;
+
+	&:hover{
+		background-color: @blueDarker;
+		border-color: @blue;
+		color: #FFF;
+	}
+}
+
+.btn-pink{
+	padding: 10px 15px;
+	font-size: 18px;
+  border: 1px solid @red;
+  float: right;
+  color: #EEE;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  background-color: @pinkRed;
+	border-radius: 2px;
+	box-shadow: 0px 2px rgba(255,255,255,0.1) inset;
+
+  &:hover{
+    @shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 3px 2px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: @shadow;
+		color: @white;
+	  padding: 12px 15px 8px;
+  }
+}
+
+
+button.close {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+    font-weight: bold;
+    color: @black;
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+    opacity: 0.2;
+
+    &:hover{
+      color: @black;
+      text-decoration: none;
+      cursor: pointer;
+      opacity: 0.4;
+    }
+}
+
+/****************************************************************************************
+*************************************** list disc ***************************************
+****************************************************************************************/
+
+ul.list-disc-is{
+  margin: 20px 0 0 20px;
+  display: block;
+
+  li, a{ display: block;}
+
+  li{
+    position: relative;
+    margin: 0 0 10px;
+
+    &:after{
+      content:'';
+      display: block;
+      left: -20px; top: 48%;
+      position: absolute;
+      background: url("../images/disc.png") no-repeat;
+      .square(12px);
+    }
+  }
+
+  a{ display: block;}
+}
+
+/****************************************************************************************
+*************************************** IS BANNER ***************************************
+****************************************************************************************/
+.is-banner{
+  position: relative;
+  overflow: hidden;
+
+  .wrapP{ position: absolute; left: 0; top: 0;}
+
+  figure{
+    position: relative; overflow: hidden;
+
+    img{ width: 100%;}
+
+    &.caption-on{
+      margin: 0 10px 0 0;
+      float: left;
+    }
+
+    &.caption-off{}
+  }
+
+  figcaption{
+    float: right;
+    display: table;
+    color: white;
+    text-align: right;
+  }
+
+  .wBullets{
+    position: absolute;
+    left: 10px; bottom: 10px;
+
+    li{ display: block; float: left; margin: 0 5px 0 0;}
+
+    a{
+      .square(15px);
+      display: block;
+      position: relative;
+      overflow: hidden;
+      text-indent: -999px;
+      opacity: 0.8;
+
+      &.bAtual{ opacity: 1 !important;}
+    }
+  }
+}
+
+/****************************************************************************************
+************************************ SLIDE PUBLICIDADE **********************************
+****************************************************************************************/
+.slide-advertising{
+  display: block;
+  margin: 25px 0 40px;
+  position: relative;
+  .size(940px, 257px);
+
+  &:before{
+    display: block;
+    content:'';
+    position: absolute;
+    left: 0; bottom: -79px;
+    background: url("../images/shadow-940.png") no-repeat -14px -5px;
+    .size(940px, 79px);
+  }
+
+  .line{
+    width: 900px;
+    border-bottom: solid 1px rgba(255,255,255,0.2);
+    position: relative;
+  }
+
+  .line-top{ left: 40px;}
+
+  .slide-conteudo{
+    .size(900px, 175px);
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 40px 0;
+    position: relative;
+  }
+
+  .painel{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    float: left;
+    padding: 10px;
+    margin: 0 40px;
+    background: white;
+    box-shadow: 0 0 1px @blueHilight;
+    opacity: 0.75;
+    .transition();
+    .box-sizing(border-box);
+    .size(220px, 175px);
+
+
+    figure{
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      img{ width: 100%;}
+    }
+
+    &:hover{ opacity: 1;}
+  }
+
+  a.seta{
+    .square(37px);
+    background: url("../images/sprites/spt-arrow-bar.png") no-repeat;
+    display: block;
+    position: absolute;
+
+    &.anterior{ left: 3px; top: -8px;}
+    &.proximo{ right: 3px; bottom: -11px; background-position: -61px 0;}
+  }
+}
+
+/****************************************************************************************
+*************************************** BREADCRUMB **************************************
+****************************************************************************************/
+
+#breadcrumb{ position: relative; margin: 0 0 20px;}
+ 
+#breadcrumbList{
+    margin-left: 0 !important;
+  display: table;
+  background: @white;
+  border-radius: 4px;
+  border: solid 1px @blueHilight;
+
+  a{
+    line-height: 26px;
+    font-size: 14px;
+    display: block;
+    color: @grayHilight;
+    font-family: @font;
+    font-weight: bold;
+  }
+
+  li{
+    display: block;
+    float: left;
+    height: 26px;
+    background: url('../images/breadcrumb-divisor.png') no-repeat right -2px;
+    padding: 0 20px 0 10px;
+
+    &.link-home{
+      a{
+        display: block;
+        background: url('../images/icon-home-breadcrumb.png') 7px 7px no-repeat;
+        width: 26px; height: 26px;
+        position: relative;
+        overflow: hidden;
+        text-indent: -9999px;
+        text-shadow: 0 1px 0 rgba(255,255,255,0.75); 
+      }
+    }
+
+    &.link-enable{
+      background: none !important;
+
+      a{
+        font-size: 13px !important;
+        color: @blueDarker !important;
+      }
+    }
+  }
+}
+
+/****************************************************************************************
+*************************************** NIVO SLIDER *************************************
+****************************************************************************************/
+#nivoDefault, .slider-wrapper{ position:relative;}
+
+.nivoSlider{
+  position:relative;
+  .size(100%, 500px);
+
+  &:before{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 0; bottom: -16px;
+    .size(940px, 16px);
+  }
+
+  img {
+    position:absolute;
+    top:0px; left:0px;
+    max-width: none;
+  }
+
+  .nivo-main-image{
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  a.nivo-imageLink {
+    position:absolute;
+    top:0px; left:0px;
+    border:0;
+    padding:0;
+    margin:0;
+    z-index:6;
+    display:none;
+    background:white;
+    opacity: 0;
+    .square(100%);
+  }
+
+  .nivo-slice {
+    display:block;
+    position:absolute;
+    z-index:5;
+    height:100%;
+    top:0;
+  }
+
+  .nivo-box {
+    display:block;
+    position:absolute;
+    z-index:5;
+    overflow:hidden;
+
+    img { display:block; }
+  }
+
+  .nivo-caption {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    background:#000;
+    color:#fff;
+    width:100%;
+    z-index:8;
+    padding: 5px 10px;
+    overflow: hidden;
+    .box-sizing(border-box);
+    opacity: 0.8;
+    display: none !important;
+
+    p{ padding:5px; margin:0;}
+  }
+
+  .nivo-html-caption{  display:none;}
+}
+
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a{ display: none !important;}
+
+.nivo-controlNav{
+
+  position: absolute;
+  z-index: 200;
+  bottom: 20px; right: 80%;
+
+  a{
+
+	  background-color: @red;
+	  border: 1px solid rgb(255, 255, 255);
+	  border-radius: 10px;
+	  color: rgb(255, 255, 255);
+	  cursor: pointer;
+	  display: block;
+	  float: left;
+	  opacity: 0.7;
+	  overflow: hidden;
+	  padding: 5px 10px;
+	  position: relative;
+
+
+    &[rel="1"]{ opacity: 0.9;}
+
+    &:hover{opacity: 0.9;}
+  }
+
+}
+
+/****************************************************************************************
+*************************************** PAGINATE ****************************************
+****************************************************************************************/
+.navigation{
+  display: inline-block;
+  float: right;
+  margin: 0 auto;
+
+  .current, a{
+    box-shadow: 0 0 0.12em rgba(0,0,0, 0.3) !important;
+    border-radius: 3px;
+    border: 1px solid @white !important;
+    background: #EEE !important;
+
+    background: -webkit-gradient(linear,
+    left bottom,
+    left top,
+    color-stop(0, #EEE),
+    color-stop(1,#FFF)) !important;
+    background: -ms-linear-gradient(bottom,
+    #EEE,
+    #FFF);
+    background: -moz-linear-gradient(center bottom,
+    #EEE 0%,
+    #FFF 100%) !important;
+    background: -o-linear-gradient(bottom,
+    #EEE,
+    #FFF,) !important;
+
+  }
+
+  .current{ color: @blue !important;}
+
+  a:hover{
+    background: #EEE !important;
+    background: -webkit-gradient(linear,
+    left bottom,
+    left top,
+    color-stop(0, #fff),
+    color-stop(1,#eee)) !important;
+    background: -ms-linear-gradient(bottom,
+    #fff,
+    #eee);
+    background: -moz-linear-gradient(center bottom,
+    #fff 0%,
+    #eee 100%) !important;
+    background: -o-linear-gradient(bottom,
+    #fff,
+    #eee,) !important;
+
+  }
+}
+
+
+/****************************************************************************************
+********************************* PAGE NOT FOUND  | 404 *********************************
+****************************************************************************************/
+#page404{
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+
+    img{ display: table; margin: 0 auto 20px;}
+}

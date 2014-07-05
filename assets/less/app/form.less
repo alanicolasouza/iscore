@@ -1,0 +1,100 @@
+/*
+*@name: Form CSS project;
+*
+*@author: Robson Junior;
+*
+*@description:  Form CSS project;
+*
+*@update: 21/05/2013;
+*
+*@company: Agência Digital Interative Studio;
+*
+*company-url: http://www.interativestudio.com.br;*
+*/
+
+
+
+form{
+	
+  .checkradio-style{
+    display: inline-block;
+    border-radius: 100%;
+    .square(20px);
+
+    input{ visibility: hidden;}
+  }
+
+  .checkradio-disable{
+    background: blue;
+  }
+
+  .checkradio-enable{
+    background: pink;
+  }
+  
+  input[type="date"],
+  input[type="datetime-local"], 
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="range"],
+  input[type="search"],
+  input[type="text"],
+  input[type="tel"],  
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  input[type="password"],
+  select,
+  textarea,
+  .chosen-container a{
+    width: 100%;
+    background: rgba(255,255,255,1);
+    margin: 0 0 20px;
+    color: @gray;
+    border: solid 1px @grayLight;
+    font-size: 14px;
+    font-family: @font;
+    resize: none;
+    padding: 10px;
+    .box-sizing(border-box);
+  	box-shadow: 0 1px 4px #DDD inset;
+	  border-radius: 3px;
+
+    &:focus{ background: rgba(255,255,255,0.9);}
+  }
+
+  textarea{height: 162px; padding: 10px;}
+}
+
+/* TOOLTIP OF PLUGIN VALIDATOR */
+.form-error{
+  background: @redAlertBg;
+  border: 1px solid @redAlertBorder;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: @redAlertTxt;
+  font-size: 11px;
+  padding: 5px 10px;
+  margin-top: -64px;
+  font-family: @fontDestak; 
+  border-radius: 3px;
+  .box-sizing(border-box);
+
+  p{ margin: 0 !important;}
+
+  em{
+    .size(0, 0);
+    display: block;
+    border: 10px solid transparent;
+    border-top-color: @redAlertBorder;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+  }
+}
+
+.invalid{
+  border-color: @redAlertBorder !important;
+  box-shadow: 0 0 5px @redAlertBorder !important;
+}

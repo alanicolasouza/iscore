@@ -1,0 +1,267 @@
+/**
+*@name: Reset CSS, HTML;
+*@author: Alan Nicolas Souza & Robson Junior;
+*@author-url: http://www.alanicolasouza.ca & http://www.robsonjunior.com.br;
+*@description: Reset CSS, HTML;
+*@update: 21/02/2013;
+*@date: 11/06/2014;
+*@company: Agência Digital Interative Studio;
+*company-url: http://www.interativestudio.com.br;
+*@version: 1.4;
+**/
+
+
+/*
+=========================================================================================
+======================================= HTML RESET ======================================
+=========================================================================================
+*/
+
+*{
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	padding: 0; margin: 0;
+}
+
+html, body{
+	font-size: 100%;
+  	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1, h2, h3, h4, h5, h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub, sup,
+b, i,
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section{
+	display: block;
+}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+pre{
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+sub,
+sup{
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+sup{ top: -0.5em;}
+sub{ bottom: -0.25em;}
+
+
+
+small{ font-size: 75%;}
+
+strong, b{ font-weight: bold;}
+
+cite, em, dfn, i{ font-style: italic}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after{
+	content: "";
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+a:hover, a:active{outline: none;}
+
+ul{
+	margin: none;
+
+	li{
+		list-style: none;
+	}
+}
+
+ul.lst-inline{
+	
+	li{
+		display: block;
+		float: left;
+	}
+}
+
+nav li{
+	display:block;
+	float:left;
+}
+
+hr{
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th{
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+td{
+	font-weight: normal;
+	vertical-align: top;
+}
+
+input, select{vertical-align: middle;}
+input[type="radio"]{vertical-align: text-bottom;}
+
+input[type="checkbox"]{
+	vertical-align: bottom;
+	*vertical-align: baseline;
+}
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+button{
+	cursor: pointer;
+}
+
+caption,
+th,
+td{
+	text-align: left;
+	font-weight: normal;
+}
+
+
+/*
+=========================================================================================
+======================================== CSS RESET ======================================
+=========================================================================================
+*/
+
+.txt-justify{ text-align: justify;}
+.txt-center{ text-align: center;}
+.txt-right{ text-align: right;}
+.txt-left{ text-align: left;}
+.txt-strong{ font-weight: bold;}
+.txt-italic{ font-style: italic;}
+
+/* align */
+.fr, .alignright{ float: right !important;}
+.fl, .alignleft{ float: left !important;}
+
+img.alignleft, img.alignright{
+	padding: 2px;
+}
+
+.alignright{ margin: 20px 0 20px 20px;}
+.alignleft{ margin: 20px 20px 20px 0;}
+
+/* class */
+.block{ display: block;}
+.hide, .seo{ display: none;}
+.visible{ visibility: visible;}
+.hidden{ visibility: hidden;}
+
+/* clean */
+.clear{
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0
+}
+
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after{ clear: both;}
+.clearfix { zoom: 1;}
+
+.wp-caption{
+    position: relative;
+    width: auto !important;
+
+    .wp-caption-text{
+        color: white;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        padding: 10px;
+        width: 100%;
+        font-size: 12px;
+        background: rgba(0,0,0,0.5);
+        .box-sizing(border-box);
+    }
+}
+
+.editable{
+	ul{
+		list-style: square;
+		margin-left: 30px;
+	}
+}

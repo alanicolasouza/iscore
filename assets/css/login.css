@@ -1,0 +1,103 @@
+/**
+*
+*@name: Custom Wordpress Login Page;
+*@author: Alan Nicolas Souza;
+*@author-url: http://www.alanicolasouza.ca;
+*@description: Change the default WP Login Style;
+*@update: 21/02/2013;
+*@date: 24/01/2013;
+*@company: Agência Digital Interative Studio;
+*@company-url: http://www.interative.cc;
+*
+*@version: 1.3;
+*
+**/
+
+.login{
+    background: #222 !important; /* Old browsers */
+}
+
+#login{
+    background-color: #444;
+    border-bottom: 3px solid #00B4CC;
+    box-shadow: 0 1px 0 #00DFFC;
+    width: 380px;
+    padding: 30px 0 15px;
+    margin: auto;
+    position: relative;
+    top: 10%;
+}
+
+.login form{
+    background: none;
+}
+
+.login form input{
+    background-color: #565656 !important;
+    border: 2px solid #333 !important;
+}
+
+.login #login h1 a {
+    background-image: url( '../images/logoW2P.png' );
+    background-size: 293px auto;
+    height: 150px;
+    width: inherit;
+}
+.login #nav a, .login #backtoblog a {
+    color: #00DFFC !important;
+}
+.login #nav a:hover, .login #backtoblog a:hover {
+    color: #00B4CC !important;
+}
+
+.login #nav {
+    text-align: right;
+    width: 110px;
+    margin: 15px 0 0;
+    float: right;
+}
+
+.login form .input{
+    font-size: 16px !important;
+}
+
+.login form .input#user_login,
+.login form .input#user_pass{
+    color: #FFF;
+    background: url( '../images/icons-login.png' ) 12px 10px no-repeat #565656;
+    padding: 10px 10px 10px 40px;
+}
+
+.login form .input#user_pass{ background-position: 12px -28px }
+
+input#wp-submit{
+    font-size: 16px;
+    background: #00DFFC !important;
+    border: 2px solid #00B4CC !important;
+    padding: 5px 20px;
+    height: 40px;
+}
+
+input#wp-submit:hover{
+    background: #00B4CC !important;
+    border: 2px solid #00DFFC !important;
+}
+
+label{
+    color: #DDD !important;
+    font-family: Arial;
+    font-size: 16px !important;
+}
+
+label[for=user_pass], label[for=user_login]{
+    font-size: 0 !important;
+    outline: none !important;
+    display: block;
+    line-height: 0 !important;
+}
+
+label br{ display: none; }
+
+#backtoblog {
+    margin: 15px 0 0 !important;
+}
