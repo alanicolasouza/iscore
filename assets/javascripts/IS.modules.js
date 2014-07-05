@@ -1,16 +1,6 @@
 
-var wz, IS_redirected, IS_checkradioStyle, IS_closeParent, IS_Banner, IS_tabs, IS_acord, IS_acord_diretor, IS_select ;
+var IS_redirected, IS_checkradioStyle, IS_closeParent, IS_Banner, IS_tabs, IS_acord, IS_acord_diretor, IS_select ;
 
-// window size
-wz = function(){
-
-	var ww, wh;
-
-	ww = window.innerWidth;
-	wh = window.innerHeight;
-
-	jQuery('.wz').css({ maxWidth: ww+'px', minHeight: wh+'px' });
-};
 
 //validator
 function IS_hasValidate(){
